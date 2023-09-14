@@ -20,7 +20,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className="max-w-3xl mx-auto py-10 bg-slate-50">
-        <header className="flex items-center justify-between">
+        <header className="flex items-center justify-between mx-8">
           <Link
             href="/"
             className="font-serif font-bold rounded-full text-lg  bg-gradient-to-r from-purple-600 via-blue-600 to-orange-400"

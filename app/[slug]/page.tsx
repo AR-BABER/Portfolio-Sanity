@@ -9,7 +9,7 @@ export default async function Page({ params }: Props) {
   const page = await getPage(params.slug);
 
   return (
-    <div>
+    <div className="mx-8">
       <h1 className=" drop-shadow text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-blue-600 to-orange-400 bg-clip-text text-transparent ">
         {page.title}
       </h1>

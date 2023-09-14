@@ -14,8 +14,8 @@ export default async function Project({ params }: Props) {
 
   console.log(project);
   return (
-    <div>
-      <header className="flex items-center justify-between object-contain">
+    <div className="mx-4 ">
+      <header className="flex items-center justify-between">
         <h1 className=" drop-shadow text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-blue-600 to-orange-400 bg-clip-text text-transparent ">
           {project?.name}
         </h1>
@@ -44,7 +44,7 @@ export default async function Project({ params }: Props) {
           ) : null}
         </div>
       </header>
-      <div className="text-lg text-gray-700 mt-5">
+      <div className="text-lg text-gray-700 mt-5 mx-2">
         <PortableText value={project?.content} />
       </div>
       <Image
@@ -52,9 +52,9 @@ export default async function Project({ params }: Props) {
         alt={project?.name}
         width={1920}
         height={1080}
-        className="mt-10 border-2 border-gray-700 object-cover rounded-xl p-5"
+        className="mx-2 mt-10 border-2 border-gray-700 object-cover rounded-xl p-5 "
       />
-      <div className="text-lg text-gray-700 mt-10 ">
+      <div className="text-lg mx-2 text-gray-700 mt-10 text-center sm:text-left">
         <PortableText value={project?.discription}></PortableText>
       </div>
     </div>
