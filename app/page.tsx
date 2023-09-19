@@ -25,9 +25,11 @@ export default async function Home() {
       <h2 className="mt-20 font-bold text-gray-700 text-3xl"> My Projects</h2>
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <div className="grid grid-cols-1 justify-center items-center">
+          <div
+            key={project._id}
+            className="grid grid-cols-1 justify-center items-center"
+          >
             <Link
-              key={project._id}
               href={`/projects/${project.slug}`}
               className=" hover:scale-105 hover:border-blue-500 transition  border-2 border-gray-500 rounded-lg p-1"
             >
