@@ -4,7 +4,7 @@ import { getProjects } from "@/sanity/lib/client";
 import Image from "next/image";
 import Link from "next/link";
 import { revalidatePath } from "next/cache";
-export default async function Home() {
+export default async function getServerSideProps() {
   const projects = await getProjects();
   console.log(projects);
   revalidatePath("/");
@@ -30,6 +30,7 @@ export default async function Home() {
             className="grid grid-cols-1 justify-center items-center"
           >
             <Link
+              key={project._id}
               href={`/projects/${project.slug}`}
               className=" hover:scale-105 hover:border-blue-500 transition  border-2 border-gray-500 rounded-lg p-1"
             >
