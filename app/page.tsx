@@ -4,9 +4,13 @@ import { getProjects } from "@/sanity/lib/client";
 import Image from "next/image";
 import Link from "next/link";
 import { revalidatePath } from "next/cache";
+import { headers } from "next/headers";
+
 export default async function getServerSideProps() {
   const projects = await getProjects();
+  const headersList = headers();
   console.log(projects);
+
   revalidatePath("/");
   return (
     <div className="mx-8">
