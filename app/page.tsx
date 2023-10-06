@@ -13,7 +13,7 @@ export default async function getServerSideProps() {
 
   revalidatePath("/");
   return (
-    <div className="mx-8">
+    <div className=" items-center justify-center w-full mx-8">
       <h1 className=" text-4xl sm:text-7xl font-extrabold">
         Hello I&apos;m
         <span className=" bg-gradient-to-r from-purple-600 via-blue-600 to-orange-400 bg-clip-text text-transparent ">
@@ -21,17 +21,17 @@ export default async function getServerSideProps() {
         </span>
         !
       </h1>
-      <p className="mt-3  text-lg sm:text-xl text-gray-600 ">
+      <p className="mt-3 text-lg sm:text-xl text-gray-600 ">
         Greetings everyone! This is my portfolio site which i made with Sanity
         CMS, it was a wonderfull experience! Check out my other different
         projects!
       </p>
       <h2 className="mt-20 font-bold text-gray-700 text-3xl"> My Projects</h2>
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className=" justify-center items-center mt-10 grid grid-cols-1 md:grid-cols-2 w-full  gap-8">
         {projects.map((project) => (
           <div
             key={project._id}
-            className="grid grid-cols-1 justify-center items-center"
+            className="grid grid-cols-1 w-4/5 justify-center items-center"
           >
             <Link
               key={project._id}
