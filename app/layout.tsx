@@ -40,7 +40,7 @@ export default async function RootLayout({
             ))}
           </div>
         </header>
-        <main className=" py-10 px-10">{children}</main>
+        <main className=" py-5 px-5">{children}</main>
       </body>
     </html>
   );

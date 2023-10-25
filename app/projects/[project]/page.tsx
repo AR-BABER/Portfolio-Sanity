@@ -19,7 +19,7 @@ export default async function Project({ params }: Props) {
         <h1 className=" drop-shadow text-2xl sm:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-blue-600 to-orange-400 bg-clip-text text-transparent ">
           {project?.name}
         </h1>
-        <div className="flex flex-col p-2 gap-2 m-2 text-sm sm:text-lg">
+        <div className="flex flex-col p-2 gap-2 m-2 text-sm sm:text-lg w-fit object-contain">
           {project?.urld ? (
             <a
               href={project?.urld}
@@ -28,7 +28,7 @@ export default async function Project({ params }: Props) {
               rel="noopener noreferrer"
               className=" hover:bg-pink-500 hover:text-pink-100 transition bg-gray-200 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap"
             >
-              View deployed Project
+              Deployed Project
             </a>
           ) : null}
           {project?.urlg ? (
@@ -39,7 +39,7 @@ export default async function Project({ params }: Props) {
               rel="noopener noreferrer"
               className=" hover:bg-purple-500 hover:text-pink-100 transition bg-gray-200 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap"
             >
-              View Source Code
+              Source Code
             </a>
           ) : null}
         </div>
