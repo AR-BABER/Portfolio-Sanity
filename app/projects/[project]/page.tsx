@@ -14,12 +14,12 @@ export default async function Project({ params }: Props) {
 
   console.log(project);
   return (
-    <div className="mx-4 ">
+    <div className=" overflow-hidden ">
       <header className="flex items-center justify-between">
-        <h1 className=" drop-shadow text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-blue-600 to-orange-400 bg-clip-text text-transparent ">
+        <h1 className=" drop-shadow text-2xl sm:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-blue-600 to-orange-400 bg-clip-text text-transparent ">
           {project?.name}
         </h1>
-        <div className="flex flex-col p-2 gap-2 m-2">
+        <div className="flex flex-col p-2 gap-2 m-2 text-sm sm:text-lg">
           {project?.urld ? (
             <a
               href={project?.urld}
@@ -52,7 +52,7 @@ export default async function Project({ params }: Props) {
         alt={project?.name}
         width={1920}
         height={1080}
-        className="mx-2 mt-10 border-2 border-gray-700 object-cover rounded-xl p-5 "
+        className=" mt-10 border-2 border-gray-700 object-cover rounded-xl p-5 "
       />
       <div className="text-lg mx-2 text-gray-700 mt-10 text-center sm:text-left">
         <PortableText value={project?.discription}></PortableText>
